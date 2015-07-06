@@ -26,8 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    For right now, when you tap the start button the uiPickerView should be hidden, and the Label with a time should be shown. Don't worry about making it work just yet.
-//    When you rotate to landscape. It should just show the time label full screen. So like this:
+
 
 }
 

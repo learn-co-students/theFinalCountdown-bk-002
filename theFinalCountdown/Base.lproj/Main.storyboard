@@ -15,21 +15,21 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0q-ZD-j8N">
-                                <rect key="frame" x="0.0" y="64" width="375" height="162"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="162"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <date key="date" timeIntervalSinceReferenceDate="426600068.10878801">
                                     <!--2014-07-09 12:01:08 +0000-->
                                 </date>
                             </datePicker>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUT-Ax-9gp" userLabel="Lower View">
-                                <rect key="frame" x="0.0" y="333" width="375" height="334"/>
+                                <rect key="frame" x="0.0" y="299" width="600" height="300.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOc-W8-nga">
-                                        <rect key="frame" x="67.5" y="146" width="53" height="42"/>
+                                        <rect key="frame" x="123" y="129" width="53" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Start">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -39,7 +39,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwG-eK-vj2">
-                                        <rect key="frame" x="247.5" y="146" width="68" height="42"/>
+                                        <rect key="frame" x="416" y="129" width="68" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Pause">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -56,9 +56,15 @@
                                     <constraint firstItem="pwG-eK-vj2" firstAttribute="centerX" secondItem="uUT-Ax-9gp" secondAttribute="centerX" multiplier="1.5" id="l8z-Zu-6vI"/>
                                     <constraint firstItem="vOc-W8-nga" firstAttribute="centerY" secondItem="uUT-Ax-9gp" secondAttribute="centerY" id="zqH-DB-bm5"/>
                                 </constraints>
+                                <variation key="heightClass=compact">
+                                    <mask key="subviews">
+                                        <exclude reference="vOc-W8-nga"/>
+                                        <exclude reference="pwG-eK-vj2"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wr6-jp-qgw">
-                                <rect key="frame" x="35" y="152" width="304" height="95.5"/>
+                                <rect key="frame" x="148" y="132.5" width="304" height="95.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -71,14 +77,32 @@
                             <constraint firstItem="uUT-Ax-9gp" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.5" id="BuI-jQ-kOv"/>
                             <constraint firstItem="uUT-Ax-9gp" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="HRE-vQ-cZz"/>
                             <constraint firstItem="t0q-ZD-j8N" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="WPA-wg-VRu"/>
+                            <constraint firstItem="wr6-jp-qgw" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Zxt-EB-k5Q">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="t0q-ZD-j8N" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ch1-4n-IZ3"/>
                             <constraint firstItem="uUT-Ax-9gp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="fZd-eD-tEV"/>
                             <constraint firstItem="wr6-jp-qgw" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="gfG-Gr-MCk"/>
                             <constraint firstItem="wr6-jp-qgw" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" multiplier="0.6" id="u1M-K5-Bql"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Zxt-EB-k5Q"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="t0q-ZD-j8N"/>
+                                <exclude reference="uUT-Ax-9gp"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Zxt-EB-k5Q"/>
+                                <include reference="gfG-Gr-MCk"/>
+                                <exclude reference="u1M-K5-Bql"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Timer" id="GXH-0Z-DV3"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="datePicker" destination="t0q-ZD-j8N" id="hjv-ku-wL2"/>
                         <outlet property="lowerHalfView" destination="uUT-Ax-9gp" id="CpZ-0u-X5r"/>
